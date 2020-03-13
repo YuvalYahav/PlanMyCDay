@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1090840494240",
+    "firebase_url": "https://plan-my-cday.firebaseio.com",
+    "project_id": "plan-my-cday",
+    "storage_bucket": "plan-my-cday.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090840494240:android:8ce2e88de6294268dec9c5",
+        "android_client_info": {
+          "package_name": "com.example.planmycday"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090840494240-25b40h062bpu0oa68hfjt0thadn3d0di.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.planmycday",
+            "certificate_hash": "023707ae08ef27cd1a707a7bbf5397102c1dcacc"
+          }
+        },
+        {
+          "client_id": "1090840494240-asvi13k6s6goqo17evpqr13p0fue9l22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1Ih3iPdl3nn4K0xuIaq6rStNoGbu5MYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1090840494240-asvi13k6s6goqo17evpqr13p0fue9l22.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
