@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,13 +15,16 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Calendar;
+import java.util.Date;
+
 
 public class MainActivity extends AppCompatActivity {
 Button btnstart, btninfo, btnplan, btnsimu;
 RadioGroup radiogroup;
 RadioButton radioButton;
 
-EditText num;
+EditText yearCD, age;
 User user;
 
     private FirebaseDatabase database;
@@ -58,7 +62,9 @@ User user;
         });
 
 
-        num = (EditText) findViewById(R.id.yearsCD);
+        yearCD = (EditText) findViewById(R.id.yearsCD);
+        age=(EditText)findViewById(R.id.age);
+
         btnstart = (Button) findViewById(R.id.batStart);
 
         user = new User();
@@ -69,8 +75,12 @@ User user;
         btnstart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int numa = Integer.parseInt(num.getText().toString().trim());
-                user.setNum(numa);
+                int yearaCD=(Calendar.getInstance().get(Calendar.YEAR))-(Integer.parseInt(yearCD.getText().toString().trim()));
+                int agea = (Calendar.getInstance().get(Calendar.YEAR))-(Integer.parseInt(age.getText().toString().trim()));
+
+                user.setGender((String) radioButton.getText());
+                user.setYearCD(yearaCD);
+                user.setYearOfBirth(agea);
                 myRef.push().setValue(user);
             }
         });
@@ -78,7 +88,7 @@ User user;
         radiogroup = findViewById(R.id.radioGroup);
     }
         public void checkButton(View v){
-            int radioID=radiogroup.getCheckedRadioButtonId();
+            Integer radioID=radiogroup.getCheckedRadioButtonId();
             radioButton=findViewById(radioID);
 
         }
