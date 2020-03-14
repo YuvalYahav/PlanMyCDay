@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class SimulationActivity extends AppCompatActivity {
-    Button  btninfo, btnplan;
+    Button  btninfo, btnplan, btneatoutside, btnfamilydinner, btnschoolltrip;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +16,10 @@ public class SimulationActivity extends AppCompatActivity {
 
         btninfo=(Button)findViewById(R.id.batInfo);
         btnplan=(Button)findViewById(R.id.batCal);
+        btneatoutside=(Button)findViewById(R.id.buteatwithfriends);
+        btnfamilydinner=(Button)findViewById(R.id.button3);
+        btnschoolltrip=(Button)findViewById(R.id.button2);
+
 
         btninfo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +36,15 @@ public class SimulationActivity extends AppCompatActivity {
                 startActivity(intentInfo);
             }
         });
+
+       btneatoutside.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intentInfo=new Intent(SimulationActivity.this, CreateBehavior.class );
+               startActivity(intentInfo);
+           }
+       });
+
 
 
 
