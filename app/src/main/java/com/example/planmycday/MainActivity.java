@@ -78,7 +78,7 @@ User user;
                 int yearaCD=(Calendar.getInstance().get(Calendar.YEAR))-(Integer.parseInt(yearCD.getText().toString().trim()));
                 int agea = (Calendar.getInstance().get(Calendar.YEAR))-(Integer.parseInt(age.getText().toString().trim()));
 
-                user.setGender((String) radioButton.getText());
+                user.setGender((String) radioButton.getContentDescription());
                 user.setYearCD(yearaCD);
                 user.setYearOfBirth(agea);
                 myRef.push().setValue(user);

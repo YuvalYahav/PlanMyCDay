@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">Plan my CDay</string>
+    <string-array name="numbers">
+        <item>one</item>
+        <item>two</item>
+        <item>three</item>
+    </string-array>
+
     <string name="title_activity_main2">Main2Activity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
